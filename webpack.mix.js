@@ -21,9 +21,10 @@ mix.setPublicPath('dist')
    .sass('resources/assets/sass/app.scss', 'css/')
    .options({
      processCssUrls: false,
-     postCss: [ require('tailwindcss')('./tailwind.js') ],
+     postCss: [ require('tailwindcss')('./tailwind.config.js') ],
    })
    .purgeCss()
+   .browserSync("http://localhost:8000");
 
 if (mix.inProduction()) {
   mix.version()
