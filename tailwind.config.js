@@ -1,10 +1,5 @@
 module.exports = {
-    purge: {
-        enabled: true,
-        content: [
-            "./resources/views/**/*.blade.php"
-        ]
-    },
+    purge: ["./resources/views/**/*.blade.php"],
     theme: {
         extend: {}
     },
