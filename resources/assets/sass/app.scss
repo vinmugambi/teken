@@ -60,3 +60,11 @@
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
+
+ .wp-markdown {
+     padding: 1em 0;
+     @apply max-w-4xl;
+     p {
+         @apply py-2 text-lg;
+     }
+ }
