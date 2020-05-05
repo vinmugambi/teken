@@ -47,17 +47,14 @@
     @endwhile --}}
     @foreach ($projects as $project)
     <div class="w-1/3  px-2 py-2 border-gray-100">
-        <img class="object-cover w-full rounded h-48 object-top" src="{{$project->image->src}}" alt="{{$project->iamge->alt}}" title="{{$project->image->title}}">
-    <a href="{{$project->permalink}}" class="text-sm font-bold uppercase text-gray-800 hover:text-blue-500 focus:text-blue-600">{{$project->name}}</a>
+        <img class="object-cover w-full rounded h-48 object-top" src="{{$project->image->src}}"
+            alt="{{$project->iamge->alt}}" title="{{$project->image->title}}">
+        <a href="{{$project->permalink}}"
+            class="text-sm font-bold uppercase text-gray-800 hover:text-blue-500 focus:text-blue-600">{{$project->name}}</a>
     </div>
     @endforeach
-
-    </div>
-
-    @php
-    wp_reset_postdata();
-    @endphp
 </section>
 @endwhile
+<hello-world></hello-world>
 
 @endsection
