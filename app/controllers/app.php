@@ -2,7 +2,7 @@
 
 // Global data available in all views extending app.blade.php
 
-namespace App;
+namespace App\Controller;
 
 use Sober\Controller\Controller;
 
@@ -15,7 +15,7 @@ class App extends Controller
 
     public function currentTemplate()
     {
-        return basename(get_page_template() ,'.blade.php');
+        return basename(get_page_template(), '.blade.php');
     }
 
     public static function title()
@@ -41,5 +41,18 @@ class App extends Controller
     public static function glideImage()
     {
         return str_replace('/app/uploads/', '/img/', get_the_post_thumbnail_url());
+    }
+
+    public function navbarMenuItems()
+    {
+        $menu = wp_get_nav_menu_items(get_nav_menu_locations()["primary_navigation"]);
+        $filtered = array_map(function ($menuItem) {
+            return (object) [
+                "title" => $menuItem->title,
+                "url" => $menuItem->url,
+                "order" => $menuItem->menu_order
+            ];
+        }, $menu);
+        return $filtered;
     }
 }

@@ -19,7 +19,7 @@
       class="inset-0 h-full w-full fixed bg-gray-800 opacity-50 cursor-default"
     ></button>-->
 
-    <div :class="menuOpen? 'block': 'hidden'" class="absolute rounded top-0 right-0 w-full sm:w-1/2 h-64 z-10 bg-white bg-opacity-100 shadow">
+    <div :class="menuOpen? 'block': 'hidden'" class="absolute rounded top-0 right-0 w-full sm:w-1/2 h-auto z-10 bg-white bg-opacity-100 shadow">
       <div class="flex justify-end h-16 px-2 sm:px-4  w-full">
         <button
           type="button"
@@ -34,13 +34,10 @@
         </button>
       </div>
       <div class="flex justify-center text-center">
-      <ul class="px-4 py-2 text-lg font-bold">
-        <li>Home</li>
-        <li>About</li>
-        <li>Programs</li>
-        <li>Donate</li>
-        <li>Volunteer</li>
-        <li>Contact us</li>
+      <ul class="px-4 pb-4 text-lg font-bold w-full">
+        <li v-for="item in items" :key="item.url" class="py-1 rounded-lg hover:bg-blue-100 ">
+          <a class="block h-full w-full" :href="item.url">{{item.title}}</a>
+        </li>
       </ul>
       </div>
     </div>
@@ -53,6 +50,7 @@ export default {
     return {
       menuOpen: false
     };
-  }
+  },
+  props: ["items"]
 };
 </script>

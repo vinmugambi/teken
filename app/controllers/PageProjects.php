@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Controller;
 
 use App\Traits\Image;
 use Sober\Controller\Controller;

@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="bg-white antialiased" @php language_attributes() @endphp>
 @include('partials.head')
-<body class="bg-gray-200" @php body_class() @endphp>
+<body class="bg-gray-100" @php body_class() @endphp>
 @php do_action('get_header') @endphp
     <div id="app" role="document">
         @include('partials.navbar')

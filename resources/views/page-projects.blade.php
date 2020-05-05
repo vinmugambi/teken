@@ -55,6 +55,4 @@
     @endforeach
 </section>
 @endwhile
-<hello-world></hello-world>
-
 @endsection

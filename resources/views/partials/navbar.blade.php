@@ -7,11 +7,10 @@
                     alt="GAP logo">
             </a>
         </div>
-        @if (has_nav_menu('primary_navigation'))
-        <navbar-menu />
-        <div class="flex hidden">
-            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'sage-menu']) !!}
-        </div>
+        @if (has_nav_menu('primary_navigation')) 
+        <navbar-menu :items='@json($navbar_menu_items)'/>
+        {{-- {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'px-4 py-2 text-lg font-bold'])
+            !!} --}}
         @endif
     </div>
 </nav>

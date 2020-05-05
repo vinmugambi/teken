@@ -3,7 +3,7 @@
 @section('content')
 
 @include('partials.page-header')
-
+@debug
 @if($custom_posts)
     @foreach($custom_posts as $post)
         <div>
