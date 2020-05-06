@@ -9,8 +9,9 @@ use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
-   public function programs(){
-       $projects = new PageProjects();
-       return $projects->projects();
-   }
+    public function programs()
+    {
+        $projects = new PageProjects();
+        return array_slice($projects->projects(), 3);
+    }
 }
