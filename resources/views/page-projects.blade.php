@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section ("content")
+@include('partials.page-header')
 @while(have_posts()) @php the_post() @endphp
 
 <section class="container mx-auto leading-normal max-w-4xl mx-auto text-lg">
     <div class="max-w-2xl">
-        <h1 class='font-bold text-4xl'>{{$post->post_title}} </h1>
         {{-- {{the_title("<h1 class='font-bold text-4xl mb-4 leading-loose'>","</h1>")}} --}}
         {{-- {!! the_content () !!} --}}
-        <div class="wp-markdown">
+        <div class="wp-markdown text-gray-700">
             {!!$post->post_content!!}
         </div>
     </div>
@@ -23,7 +23,7 @@
     $the_query= new \WP_Query($args)
     @endphp --}}
 
-    <div class="flex py-8 flex-wrap justify-center">
+    <div class="flex pt-4 pb-8 flex-wrap justify-center">
 
         {{-- @while($the_query->have_posts()) @php $the_query->the_post() @endphp
         @php
@@ -46,11 +46,27 @@
     </div>
     @endwhile --}}
     @foreach ($projects as $project)
-    <div class="w-1/3  px-2 py-2 border-gray-100">
-        <img class="object-cover w-full rounded h-48 object-top" src="{{$project->image->src}}"
-            alt="{{$project->iamge->alt}}" title="{{$project->image->title}}">
-        <a href="{{$project->permalink}}"
-            class="text-sm font-bold uppercase text-gray-800 hover:text-blue-500 focus:text-blue-600">{{$project->name}}</a>
+    <div class="project-card w-full md:w-1/2 lg:w-1/3  px-2 py-2 border-gray-100">
+        <a href="{{$project->permalink}}" class="block">
+            <div class="relative">
+                <img class="object-cover w-full rounded-lg h-64 object-top" src="{{$project->image->src}}"
+                    alt="{{$project->image->alt}}" title="{{$project->image->title}}">
+                <div
+                    class="learn-more absolute hidden bottom-0 left-0 h-8 w-full  px-2 rounded-b-lg bg-blue-400 text-white">
+                    Learn more
+                    <svg class="fill-current h-4 w-4 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <polygon
+                            points="16.172 9 10.101 2.929 11.515 1.515 20 10 19.293 10.707 11.515 18.485 10.101 17.071 16.172 11 0 11 0 9" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="p-2">
+                <p class="text-sm font-bold uppercase ">
+                    {{$project->name}}
+                </p>
+            </div>
+        </a>
     </div>
     @endforeach
 </section>

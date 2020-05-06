@@ -1,10 +1,13 @@
 <article @php post_class() @endphp>
-    <section class="container mx-auto text-gray-900 leading-normal max-w-4xl mx-auto text-lg">
-        <header>
-            <h1 class="font-bold text-4xl  leading-tight">{{$project->name}}</h1>
-            <img class="w-full object-cover object-center rounded-lg h-64" src="{{$project->image->src}}" alt="{{$project->image->alt}}">
+    <section class="container mx-auto text-gray-900 leading-normal max-w-4xl mx-auto text-lg pb-24">
+        <header class="py-8">
+            <h1 class="font-bold text-4xl  leading-tight pb-4">{{$project->name}}</h1>
+            <div class="h-96 ">
+                
+                <img class="w-full object-fill object-top rounded-lg h-full" src="{{$project->image->src}}" alt="{{$project->image->alt}}">
+                </div>
         </header>
-        <div class="wp-markdown">
+        <div class="wp-markdown max-w-2xl">
             {!!$project->case_study!!}
         </div>
     </section>

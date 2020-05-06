@@ -60,11 +60,24 @@
  * @import "utilities/background-patterns";
  * @import "utilities/skew-transforms";
  */
-
+body{
+    font-family: "PT Sans", sans-serif;
+}
  .wp-markdown {
      padding: 1em 0;
-     @apply max-w-4xl;
+     h2{
+         @apply text-2xl pt-6 pb-2 font-bold;
+     }
      p {
          @apply py-2 text-lg;
+     }
+     a{
+         @apply text-blue-400;
+     }
+ }
+
+ .project-card:hover {
+     .learn-more {
+         @apply block;
      }
  }
