@@ -19,12 +19,12 @@
       class="inset-0 h-full w-full fixed bg-gray-800 opacity-50 cursor-default"
     ></button>-->
 
-    <div :class="menuOpen? 'block': 'hidden'" class="absolute rounded top-0 right-0 w-full sm:w-1/2 h-auto z-10 bg-white bg-opacity-100 shadow">
-      <div class="flex justify-end h-16 px-2 sm:px-4  w-full">
+    <div :class="menuOpen? 'block': 'hidden'" class="absolute rounded top-0 right-0 h-auto z-10">
+      <div class="flex justify-end h-16 px-2 sm:px-4">
         <button
           type="button"
           @click="menuOpen=false"
-          class="block h-12 w-12 my-auto p-2 rounded-full hover:bg-red-100 focus:outline-none focus:bg-red-200"
+          class="block h-12 w-12 my-auto p-2 rounded-full bg-red-200 hover:bg-red-100 focus:outline-none focus:bg-red-300 focus:outline-none"
         >
           <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
             <path
@@ -33,10 +33,10 @@
           </svg>
         </button>
       </div>
-      <div class="flex justify-center text-center">
-      <ul class="px-4 pb-4 text-lg font-bold w-full">
-        <li v-for="item in items" :key="item.url" class="py-1 rounded-lg hover:bg-blue-100 ">
-          <a class="block h-full w-full" :href="item.url">{{item.title}}</a>
+      <div class="flex justify-center bg-white shadow rounded">
+      <ul class="py-2 text-lg font-bold "  style="width: 12rem;">
+        <li v-for="item in items" :key="item.url" class="py-1 hover:bg-blue-100" style="padding-left: 2rem;">
+          <a class="block h-full" :href="item.url">{{item.title}}</a>
         </li>
       </ul>
       </div>
