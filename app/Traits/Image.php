@@ -6,7 +6,7 @@ trait Image
 {
     protected function getImage($id, $size = "medium")
     {
-        $project_image = get_field("project_image", $id);
+        $project_image = get_field("image", $id);
 
         return (object) [
             "alt" => $project_image["alt"],

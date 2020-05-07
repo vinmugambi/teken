@@ -22,7 +22,7 @@
             </div>
             @endforeach
         </div>
-        <a href="/index.php/projects" class="ml-2 px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-400 bg-blue-600">View all programs</a>
+        <a href="/programs" class="ml-2 px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-400 bg-blue-600">View all programs</a>
     </div>
 </section>
 

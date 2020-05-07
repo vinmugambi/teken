@@ -1,5 +1,4 @@
 let mix = require('laravel-mix');
-// require('laravel-mix-purgecss');
 
 /*
  |--------------------------------------------------------------------------
@@ -23,7 +22,6 @@ mix.setPublicPath('dist')
      processCssUrls: false,
      postCss: [ require('tailwindcss')('./tailwind.config.js') ],
    })
-  //  .purgeCss()
    .browserSync("http://localhost:8000");
 
 if (mix.inProduction()) {

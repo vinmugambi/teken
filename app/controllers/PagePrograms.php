@@ -15,7 +15,7 @@ class PageProjects extends Controller
             "offset" => 0,
             "orderby" => "date",
             "order" => "desc",
-            "post_type" => "projects"
+            "post_type" => "program"
         ];
         $the_query = new \WP_Query($args);
         $projects = [];

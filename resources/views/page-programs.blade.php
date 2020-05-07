@@ -45,6 +45,7 @@
             <img src="{{$url}}" alt="{{$alt}}" title="{{$caption}}" width="{{$width}}" height="{{$height}}">
     </div>
     @endwhile --}}
+    
     @foreach ($projects as $project)
     <div class="project-card w-full md:w-1/2 lg:w-1/3  px-2 py-2 border-gray-100">
         <a href="{{$project->permalink}}" class="block">
@@ -54,7 +55,7 @@
                 <div
                     class="learn-more absolute hidden bottom-0 left-0 h-8 w-full  px-2 rounded-b-lg bg-blue-400 text-white">
                     Learn more
-                    <svg class="fill-current h-4 w-4 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                         <polygon
                             points="16.172 9 10.101 2.929 11.515 1.515 20 10 19.293 10.707 11.515 18.485 10.101 17.071 16.172 11 0 11 0 9" />
                     </svg>

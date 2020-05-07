@@ -1,5 +1,12 @@
 module.exports = {
-    purge: ["./resources/views/**/*.blade.php"],
+    purge: {
+        enabled: true,
+        content: [
+            "./resources/views/**/*.blade.php",
+            "./resources/assets/js/**/*.vue",
+            "./resources/assets/sass/**/*.scss"
+        ]
+    },
     theme: {
         extend: {
             spacing: {
