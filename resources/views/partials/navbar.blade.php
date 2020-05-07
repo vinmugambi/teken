@@ -3,7 +3,7 @@
         <div>
             <a href="{{ home_url('/') }}">
                 {{-- {{ get_bloginfo('name', 'display') }} --}}
-                <img class=" h-16  w-auto mr-0 py-1" src="http://localhost:8000/wp-content/uploads/2020/05/logo.png"
+                <img class=" h-16  w-auto mr-0 py-1" src="/wp-content/uploads/2020/05/logo.png"
                     alt="GAP logo">
             </a>
         </div>
