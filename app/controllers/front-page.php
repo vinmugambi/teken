@@ -12,6 +12,6 @@ class FrontPage extends Controller
     public function programs()
     {
         $projects = new PageProjects();
-        return array_slice($projects->projects(), 3);
+        return array_slice($projects->projects(), 0 , 3);
     }
 }
