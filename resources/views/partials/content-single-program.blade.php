@@ -1,7 +1,10 @@
 <article @php post_class() @endphp>
+ <pre>
+    @dd($post))
+    </pre>
     <section class="container mx-auto text-gray-900 leading-normal max-w-4xl mx-auto text-lg pb-24 px-2 sm:px-4">
         <header class="py-8">
-            <h1 class="text-4xl leading-tight py-4 font-light">{{$project->name}}</h1>
+            <h1 class="text-4xl leading-tight py-4 font-light">{{$post->post_title}}</h1>
             <div class="h-96 ">
                 <img class="w-full object-fill object-top rounded-lg h-full" src="{{$project->image->src}}"
                     alt="{{$project->image->alt}}">

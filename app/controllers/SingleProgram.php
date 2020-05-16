@@ -20,7 +20,8 @@ class SingleProjects extends Controller
             "location" => get_field('location', get_the_ID()),
             "sponsors" => get_field('sponsors', get_the_ID()),
             "how_to_sponsor" => get_field('how_to_sponsor', get_the_ID()),
-            "image" => $this->getImage(get_the_ID(), "large")
+            "images" => $this->getFeaturedImages(get_the_ID(), $size="medium"),
+            "global"=> $this->listGlobal()
         ];
     }
 }
