@@ -45,13 +45,14 @@
             <img src="{{$url}}" alt="{{$alt}}" title="{{$caption}}" width="{{$width}}" height="{{$height}}">
     </div>
     @endwhile --}}
-    
-    @foreach ($projects as $project)
-    <div class="project-card w-full md:w-1/2 lg:w-1/3  px-2 py-2 border-gray-100">
-        <a href="{{$project->permalink}}" class="block">
+    {{-- @dd($programs) --}}
+    @foreach ($programs as $program)
+    <?php $program_image = $program->image->src ? $program->image->src : get_template_directory_uri().'/assets/images/no_preview_image.png'; ?>
+    <div class="project-card w-full sm:w-1/2 md:w-1/3  px-2 py-2">
+        <a href="{{$program->permalink}}" class="block">
             <div class="relative">
-                <img class="object-cover w-full rounded-lg h-64 object-top" src="{{$project->image->src}}"
-                    alt="{{$project->image->alt}}" title="{{$project->image->title}}">
+                <img class="object-cover w-full rounded-lg h-64 object-center" src="{{$program_image}}"
+                    alt="{{$program->image->alt}}" title="{{$program->image->title}}">
                 <div
                     class="learn-more absolute hidden bottom-0 left-0 h-8 w-full  px-2 rounded-b-lg bg-blue-400 text-white">
                     Learn more
@@ -64,7 +65,7 @@
 
             <div class="p-2">
                 <p class="text-sm font-bold uppercase ">
-                    {{$project->name}}
+                    {{$program->name}}
                 </p>
             </div>
         </a>

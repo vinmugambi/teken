@@ -5,10 +5,10 @@ namespace App\Controller;
 use App\Traits\Image;
 use Sober\Controller\Controller;
 
-class PageProjects extends Controller
+class PagePrograms extends Controller
 {
     use Image;
-    public function  projects()
+    public function  programs()
     {
         $args = [
             "post_per_page" => -1,
@@ -18,20 +18,20 @@ class PageProjects extends Controller
             "post_type" => "program"
         ];
         $the_query = new \WP_Query($args);
-        $projects = [];
+        $programs = [];
 
         if ($the_query->post_count > 0) {
-            $projects = array_map(function ($project) {
+            $programs = array_map(function ($program) {
                 return (object) [
-                    "image" => $this->getImage($project),
-                    "name" => get_field("name", $project),
-                    "permalink" => get_post_permalink($project),
+                    "image" => $this->getFirstImage($program->ID),
+                    "name" => get_field("name", $program),
+                    "permalink" => get_post_permalink($program),
                 ];
             }, $the_query->posts);
         }
 
         wp_reset_postdata();
 
-        return $projects;
+        return $programs;
     }
 }

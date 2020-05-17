@@ -55,4 +55,12 @@ class App extends Controller
         }, $menu);
         return $filtered;
     }
+
+    protected function listGlobal()
+    {
+        ksort($GLOBALS);
+        echo '<ol>';
+        echo '<li>' . implode('</li><li>', array_keys($GLOBALS)) . '</li>';
+        echo '</ol>';
+    }
 }

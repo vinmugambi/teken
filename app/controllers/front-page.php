@@ -4,14 +4,14 @@
 
 namespace App\Contoller;
 
-use PageProjects;
+use PagePrograms;
 use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
     public function programs()
     {
-        $projects = new PageProjects();
-        return array_slice($projects->projects(), 0 , 3);
+        $projects = new PagePrograms();
+        return array_slice($projects->programs(), 0 , 3);
     }
 }

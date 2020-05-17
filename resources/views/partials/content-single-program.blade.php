@@ -1,6 +1,6 @@
 <article @php post_class() @endphp>
  <pre>
-    @dd($post))
+    @dd($project->first_image))
     </pre>
     <section class="container mx-auto text-gray-900 leading-normal max-w-4xl mx-auto text-lg pb-24 px-2 sm:px-4">
         <header class="py-8">
