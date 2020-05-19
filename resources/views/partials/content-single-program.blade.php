@@ -1,33 +1,38 @@
 <article @php post_class() @endphp>
- <pre>
-    @dd($project->first_image))
-    </pre>
+
     <section class="container mx-auto text-gray-900 leading-normal max-w-4xl mx-auto text-lg pb-24 px-2 sm:px-4">
-        <header class="py-8">
-            <h1 class="text-4xl leading-tight py-4 font-light">{{$post->post_title}}</h1>
-            <div class="h-96 ">
-                <img class="w-full object-fill object-top rounded-lg h-full" src="{{$project->image->src}}"
-                    alt="{{$project->image->alt}}">
-            </div>
+        <header class="py-4">
+            @if(!empty($program->images))
+            <carousel :images='@json($program->images)' />
+            @endif
+
         </header>
+        <h1 class="text-4xl leading-tight font-light">{{$post->post_title}}</h1>
+        @if($post->location)
+        <p class="text-gray-600">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M10 20S3 10.87 3 7a7 7 0 1 1 14 0c0 3.87-7 13-7 13zm0-11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+            </svg>
+            {{$post->location}}
+        </p>
+        @endif
         <div class="wp-markdown max-w-2xl">
-            {!!$project->description!!}
+            {!!$program->description!!}
         </div>
-        @if($project->sponsors)
+        @if($program->sponsors)
         <div>
-            <h3 class="text-green-400 text-2xl">Sponsors</h3>
+            <h3 class="text-green-400 text-xl">Sponsors</h3>
             <div class="wp-markdown">
 
-                {!!$project->sponsors!!}
+                {!!$program->sponsors!!}
             </div>
         </div>
         @endif
-        @if($project->how_to_sponsor)
+        @if($program->how_to_sponsor)
         <div>
-            <h3 class="text-green-400 text-2xl">Support this program</h3>
+            <h3 class="text-green-400 text-xl">Support this program</h3>
             <div class="wp-markdown">
-
-                {!!$project->how_to_sponsor!!}
+                {!!$program->how_to_sponsor!!}
             </div>
         </div>
         @endif

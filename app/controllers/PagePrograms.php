@@ -24,7 +24,7 @@ class PagePrograms extends Controller
             $programs = array_map(function ($program) {
                 return (object) [
                     "image" => $this->getFirstImage($program->ID),
-                    "name" => get_field("name", $program),
+                    "name" => $program->post_title,
                     "permalink" => get_post_permalink($program),
                 ];
             }, $the_query->posts);

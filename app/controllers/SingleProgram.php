@@ -5,12 +5,11 @@ namespace App\Contoller;
 use Sober\Controller\Controller;
 use App\Traits\Image;
 
-class SingleProjects extends Controller
+class SingleProgram extends Controller
 {
     use Image;
-    public function project()
+    public function program()
     {
-
         return (object) [
             "name" => get_field('name', get_the_ID()),
             "url" => get_field('url', get_the_ID()),
