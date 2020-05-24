@@ -37,7 +37,7 @@
                     <h3 class="text-2xl pb-2">Mail us a cheque</h3>
                     <p class="px-1">
                         Africa Australia Alliance for Peace and Reconciliation <br>
-                        P.O.Box 730 Hamilton, NSW, 2303.
+                        P.O. Box 730 Hamilton, NSW, 2303
                     </p>
                 </div>
             </div>
