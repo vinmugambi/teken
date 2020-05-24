@@ -2,7 +2,7 @@
   <div>
     <img
       v-if="images.length===1"
-      class="h-108 object-cover rounded"
+      class="h-108 w-full object-cover rounded"
       :src="images[0].src"
       :alt="images[0].alt"
     />
