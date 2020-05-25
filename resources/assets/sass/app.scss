@@ -8,9 +8,12 @@
     h2 {
         @apply text-2xl pt-6 pb-2 font-bold;
     }
+    h4 {
+        @apply text-2xl underline font-mono;
+    }
     p {
         @apply py-2 text-lg;
-    }       
+    }
 }
 
 svg {
@@ -19,14 +22,14 @@ svg {
 a {
     @apply text-blue-400;
 }
-a.wp-block-link{
+a.wp-block-link {
     @apply inline-block w-auto mt-4 px-4 py-1 text-white text-base border rounded-lg;
 }
 
-a.wp-block-link:hover{
+a.wp-block-link:hover {
     @apply bg-blue-500 bg-opacity-50;
 }
-a.wp-block-link:focus{
+a.wp-block-link:focus {
     @apply outline-none border-blue-200 text-blue-200;
 }
 
