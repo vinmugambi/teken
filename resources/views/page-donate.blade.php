@@ -21,7 +21,7 @@
                         </li>
                         <li class="flex flex-col md:flex-row pt-2 md:p-0">
                             <div class="w-full md:w-1/5 font-mono">Account</div>
-                            <div class="w-full md:w-4/5"> Africa Australia Alliance for Peace and Reconciliation</div>
+                            <div class="w-full md:w-4/5"> Global Alliance for Peace</div>
                         </li>
                         <li class="flex flex-col md:flex-row pt-2 md:p-0">
                             <div class="w-full md:w-1/5 font-mono">Number</div>
@@ -36,7 +36,7 @@
                 <div class="px-1 pt-8">
                     <h3 class="text-2xl pb-2">Mail us a cheque</h3>
                     <p class="px-1">
-                        Africa Australia Alliance for Peace and Reconciliation <br>
+                        Global Alliance for Peace <br>
                         P.O. Box 730 Hamilton, NSW, 2303
                     </p>
                 </div>
@@ -49,7 +49,7 @@
 <div class="bg-blue-100 text-blue-600">
     <div class="container mx-auto">
         <div class="max-w-4xl mx-auto py-2 px-4 text-xs">
-            Global Alliance for peace is a registered charitable
+            Global Alliance for Peace is a registered charitable
             organisation
             within Australia. Donations over $2 are tax deductable. Our ABN is 16 544 925 200.
         </div>

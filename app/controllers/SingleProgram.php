@@ -19,7 +19,7 @@ class SingleProgram extends Controller
             "location" => get_field('location', get_the_ID()),
             "sponsors" => get_field('sponsors', get_the_ID()),
             "how_to_sponsor" => get_field('how_to_sponsor', get_the_ID()),
-            "images" => $this->getFeaturedImages(get_the_ID(), $size="medium"),
+            "images" => $this->getFeaturedImages(get_the_ID(), $size="full"),
             "first_image"=> $this->getFirstImage(get_the_ID())
         ];
     }
