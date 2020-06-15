@@ -1,7 +1,7 @@
 <template>
   <div class="py-8">
         <div class="flex flex-col justify-between h-32 text-center ">
-        <h2 class="text-4xl font-hairline">What we do</h2>
+        <h2 class="text-4xl">What we do</h2>
         <h3 class="text-xl max-w-lg mx-auto text-gray-600">
           We have developed community programs aimed at helping
           the most vulnerable to rebuild and strengthen their lives

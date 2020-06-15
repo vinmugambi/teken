@@ -14,13 +14,16 @@
     p {
         @apply py-2 text-lg;
     }
+    a {
+        @apply text-blue-400;
+    }
 }
 
 svg {
     @apply inline fill-current w-4 h-4;
 }
-a {
-    @apply text-blue-400;
+a.navbar {
+    @apply text-gray-600;
 }
 a.wp-block-link {
     @apply inline-block w-auto mt-4 px-4 py-1 text-white text-base border rounded-lg;
