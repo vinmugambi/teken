@@ -23,11 +23,11 @@
             <div class="w-1/2 md:w-1/3 lg:w-1/4 px-1 py-1 lg:px-4">
 
                 <a href="{{$program->permalink}}"
-                    class="block overflow-hidden font-semibold rounded-lg home-p">
-                    <img class="h-48 w-full object-center rounded-t-lg object-cover bg-white"
+                    class="block h-full overflow-hidden rounded-lg">
+                    <img class="h-48 w-full object-center rounded-t-lg object-cover"
                         src="{{$program_image}}"
                         alt="{{$program->image->alt or "no image"}}" title="{{$program->image->title or "no image"}}">
-                    <div class="px-2 leading-tight hover:underline py-4">
+                    <div class="px-2 leading-tight hover:underline py-4 home-p">
                         {{$program->name}}
                     </div>
                 </a>

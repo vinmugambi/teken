@@ -50,12 +50,9 @@ a.wp-block-link:focus {
 }
 .home-p {
     background-image: linear-gradient(
-        to right,
-        rgba(3, 3, 48, 0.8),
-        rgba(0, 0, 204, 0.5)
+        to bottom,
+        rgba(135, 135, 139, 0.1),
+        rgba(207, 207, 231, 0.6)
     );
-    color: white;
 }
-.home-p:hover {
-    background: rgba(0, 0, 204, 0.5);
-}
+
