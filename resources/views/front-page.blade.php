@@ -27,7 +27,7 @@
                     <img class="h-48 w-full object-center rounded-t-lg object-cover"
                         src="{{$program_image}}"
                         alt="{{$program->image->alt or "no image"}}" title="{{$program->image->title or "no image"}}">
-                    <div class="px-2 leading-tight hover:underline py-4 home-p">
+                    <div class="px-2 leading-tight hover:underline py-4 home-p h-full">
                         {{$program->name}}
                     </div>
                 </a>
