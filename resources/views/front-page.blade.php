@@ -7,8 +7,11 @@
 {{-- @dd($programs[1]) --}}
 <section class="container mx-auto pb-4">
     <div class="mx-auto max-w-6xl px:2 sm:px-4 py-8">
+     <div id="video" class="flex">
+<div class="px-4"><iframe class="rounded-lg" width="560" height="315" src="https://www.youtube.com/embed/PajKCEvPCXg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="px-4">ABAPHAKAZI NIMIRYANGO ITISHOBOYE NAIROBI YAHAWE UBUFASHA NUMURYANGO WA GLOBAL ALLIANCE 4 PEACE</div>     </div>
         <div class="flex justify-between pt-4 pb-6 px-4">
-            <h2 class="text-4xl">New programs</h2>
+            <h2 class="text-4xl">Programs</h2>
             <div class="hidden sm:flex items-end">
                 <a href="/programs"
                     class="block ml-2 px-4 py-2 rounded text-gray-800 hover:bg-gray-200">View
